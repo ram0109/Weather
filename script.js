@@ -7,7 +7,8 @@ const humidity=document.getElementById('humidity');
 const wind_speed=document.getElementById('wind-speed');
 const location_not_found=document.querySelector('.location-not-found');
 const weather_body=document.querySelector('.weather-body');
-const home=document.querySelector('.home')
+const home=document.querySelector('.home');
+const location_error=document.querySelector('.location-error');
 
 async function checkweather(city){
 	const api_key="c6bd170c039820f0c0a7c396e5c7b95a";
@@ -21,6 +22,7 @@ async function checkweather(city){
 	}
 
 	if(weather_data.cod ==='404' || weather_data.cod===`400`){
+		location_error.src="./assets/404.png";
 		location_not_found.style.display="flex";
 		weather_body.style.display="none";
 		console.log("Error 404/400")
@@ -37,19 +39,19 @@ async function checkweather(city){
 
 	switch(weather_data.weather[0].main){
 		case 'Clouds':
-			weather_img.src="/assets/cloud.png";
+			weather_img.src="./assets/cloud.png";
 			break;
 		case 'Clear':
-			weather_img.src="/assets/clear.png";
+			weather_img.src="./assets/clear.png";
 			break;
 		case 'Rain':
-			weather_img.src="/assets/rain.png";
+			weather_img.src="./assets/rain.png";
 			break;
 		case 'Mist':
-			weather_img.src="/assets/mist.png";
+			weather_img.src="./assets/mist.png";
 			break;
 		case 'Snow':
-			weather_img.src="/assets/snow.png";
+			weather_img.src="./assets/snow.png";
 			break;
 	}
 	console.log(weather_data);
