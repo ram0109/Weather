@@ -18,7 +18,7 @@ body{
     height: 550px;
     background-color: #fff;
     border-radius: 12px;
-    padding:28px
+    padding:28px;
 }
 .search-box{
     width: 100%;
@@ -62,7 +62,7 @@ body{
     width: 60%;
 }
 .weather-box{
-    margin-block: 20px;
+    margin-block: 15px;
     text-align: center;
 }
 .weather-box .temperature{
@@ -85,6 +85,7 @@ body{
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    margin-bottom: 17px;
 }
 .humidity, .wind{
     display: flex;
@@ -108,7 +109,8 @@ body{
     font-weight: 700;
 }
 .location-not-found{
-    margin-top: 80px;
+    margin-top: 50px;
+    margin-bottom: 90px;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -125,6 +127,8 @@ body{
 .home{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .home-img{
     margin-top: 30px;
@@ -134,4 +138,72 @@ body{
     margin-top: 50px;
     text-align: center;
     text-transform: capitalize;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/*--------------------css for small screen--------------------*/
+@media only screen and (max-width : 600px){
+    .container{
+        width: 300px;
+        height: 500px;
+        padding: 20px;
+        padding-top: 30px;
+    }
+    .search-box input{
+        font-size:18px;
+        margin-right: 20px;
+    }
+    .weather-box .temperature{
+        font-size: 35px;
+    }
+    .weather-box .description{
+        font-size: 18px;
+    }
+    .humidity{
+        margin-left: 0px;
+    }
+    .wind{
+        margin-right: 0px;
+    }
+    .weather-details{
+        margin-bottom:1.5px;
+    }
+    .weather-details i{
+        font-size: 25px;
+    }
+    .weather-details .text{
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    .text span{
+        font-size: 18px;
+    }
+    .location-not-found{
+        margin-top: 50px;
+        margin-bottom: 108px;
+    }
+    .location-not-found img{
+        width: 80%;
+    }
+    .location-not-found h1{
+        font-size: 18px;
+        margin-block-end: 60px;
+    }
+    .home-img{
+        margin-top: 30px;
+        width: 100%;
+    }
+    .home h2{
+        margin-top: 50px;
+        font-size: 22px;
+    }
+    .copyright{
+        font-size: 12px;
+        margin-top: 50px;
+    }
 }
